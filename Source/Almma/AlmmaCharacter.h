@@ -47,6 +47,23 @@ class AAlmmaCharacter : public ACharacter
 
 public:
 	AAlmmaCharacter();
+    
+    /** ---charachter variables--- */
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = stats)
+    float CharHealth;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = stats)
+    float CharEnergy;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = stats)
+    float MaxCharHealth;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = stats)
+    float MaxCharEnergy;
+    
+    //    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = stats)
+    //    float health;
+
 
 protected:
 	virtual void BeginPlay();
