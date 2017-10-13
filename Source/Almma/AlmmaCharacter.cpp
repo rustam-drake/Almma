@@ -295,3 +295,17 @@ bool AAlmmaCharacter::EnableTouchscreenMovement(class UInputComponent* PlayerInp
 	}
 	return bResult;
 }
+
+// Custom Methods
+
+float AAlmmaCharacter::setHealth(float charHealth, float itemHealth)
+{
+//    float out = charHealth + itemHealth;
+//    if (out>1) {
+//        out = 1;
+//    }
+//    AlmmaCharacter.CharHealth = out;
+//
+//    return out;
+    return 1;
+}

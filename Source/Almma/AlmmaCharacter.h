@@ -46,6 +46,7 @@ class AAlmmaCharacter : public ACharacter
 	class UMotionControllerComponent* L_MotionController;
 
 public:
+//    VARIABLES
 	AAlmmaCharacter();
     
     /** ---charachter variables--- */
@@ -69,6 +70,7 @@ protected:
 	virtual void BeginPlay();
 
 public:
+//    METHODS
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
@@ -96,6 +98,13 @@ public:
 	/** Whether to use motion controller location for aiming. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	uint32 bUsingMotionControllers : 1;
+    
+//    CUSTOM METHODS
+    UFUNCTION(BlueprintCallable, Category = maxPlayerStatChecker)
+    float setHealth();
+    
+    UFUNCTION(BlueprintCallable, Category = maxPlayerStatChecker)
+    float setEnergy(float charHealth, float itemHealth);
 
 protected:
 	
